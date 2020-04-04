@@ -1,6 +1,6 @@
 # Welcome to Uwonym
 
-**Uwonym** is an open source dating platform, you can see a running version [here].(https://uwonym.me)
+**Uwonym** is an open source dating platform, you can see a running version [here](https://uwonym.me).
 
 
 # Setup
