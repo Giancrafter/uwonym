@@ -24,8 +24,8 @@ $SMTP_ENCRYPTION = \''.$_POST['smtpencryption'].'\'; //SET SMTP ENCRYPTION MODE\
 $SMTP_PORT = \''.$_POST['smtpport'].'\'; //SET SMTP PORT\n ?>';
 fwrite($myfile, $txt);
 fclose($myfile);
-mysqli_connect($_POST['dbhost'], $_POST['dbuser'], $_POST['dbpass'], $_POST['dbname']);
-if (mysqli_query("CREATE TABLE IF NOT EXISTS `accounts` (
+$mysqli = new mysqli($_POST['dbhost'], $_POST['dbuser'], $_POST['dbpass'], $_POST['dbname'], $_POST['dbport']);
+$mysqli -> query("CREATE TABLE IF NOT EXISTS `accounts` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
  `username` varchar(50) NOT NULL,
  `password` varchar(255) NOT NULL,
@@ -40,14 +40,11 @@ if (mysqli_query("CREATE TABLE IF NOT EXISTS `accounts` (
  `location` int(4) NOT NULL DEFAULT '0',
  `hash` varchar(12) NOT NULL DEFAULT '222222222222',
  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8")){
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8");
 
   	header('Location: index.html');
   	exit;
 
-} else {
-  echo ("Bei der Datenbankverbindung ist ein Fehler aufgetreten.");
-}
 
 
 }
