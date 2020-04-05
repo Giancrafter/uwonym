@@ -1,29 +1,27 @@
 <?php
 if (isset ($_POST['name'])){
 $myfile = fopen("config.php", "w") or die("Unable to open file!");
-$txt = "<?php \n
+$txt = '<?php \n
 SITE CONFIG \n
-$SITE_NAME = '".$_POST['name']."'; //INSERT YOUR SITE NAME\n
-$SITE_DOMAIN = '".$_POST['domain']."'; //INSERT SITE DOMAIN, FOR EXAMPLE google.com\n
+$SITE_NAME = \''.$_POST['name'].'\'; //INSERT YOUR SITE NAME\n
+$SITE_DOMAIN = \''.$_POST['domain'].'\'; //INSERT SITE DOMAIN, FOR EXAMPLE google.com\n
 \n
 \n
 //MYSQL CONFIG\n
-$DATABASE_HOST = '".$_POST['dbhost']."';\n
-$DATABASE_USER = '".$_POST['dbuser']."'; //INSERT DB USER HERE\n
-$DATABASE_PASS = '".$_POST['dbpass']."'; //INSERT DB PASSWORD HERE\n
-$DATABASE_NAME = '".$_POST['dbname']."'; //INSERT DB NAME HERE\n
-$DATABASE_PORT = '".$_POST['dbport']."'; //INSERT DB PORT HERE\n
+$DATABASE_HOST = \''.$_POST['dbhost'].'\';\n
+$DATABASE_USER = \''.$_POST['dbuser'].'\'; //INSERT DB USER HERE\n
+$DATABASE_PASS = \''.$_POST['dbpass'].'\'; //INSERT DB PASSWORD HERE\n
+$DATABASE_NAME = \''.$_POST['dbname'].'\'; //INSERT DB NAME HERE\n
+$DATABASE_PORT = \''.$_POST['dbport'].'\'; //INSERT DB PORT HERE\n
 \n
 \n
 //SMTP CONFIG\n
-$SMTP_HOST = '".$_POST['smtphost']."'; //INSERT SMTP HOST HERE\n
+$SMTP_HOST = \''.$_POST['smtphost'].'\'; //INSERT SMTP HOST HERE\n
 $SMTP_AUTH = true; //ENABLE SMTP AUTHENTICATION\n
-$SMTP_USERNAME = '".$_POST['smtpuser']."'; //INSERT SMTP USER NAME HERE\n
-$SMTP_PASSWORD = '".$_POST['smtppass']."'; //INSERT SMTP PASSWORD HERE\n
-$SMTP_ENCRYPTION = '".$_POST['smtpencryption']."'; //SET SMTP ENCRYPTION MODE\n
-$SMTP_PORT = ".$_POST['smtpport']."; //SET SMTP PORT\n
-\n?>
-";
+$SMTP_USERNAME = \''.$_POST['smtpuser'].'\'; //INSERT SMTP USER NAME HERE\n
+$SMTP_PASSWORD = \''.$_POST['smtppass'].'\'; //INSERT SMTP PASSWORD HERE\n
+$SMTP_ENCRYPTION = \''.$_POST['smtpencryption'].'\'; //SET SMTP ENCRYPTION MODE\n
+$SMTP_PORT = \''.$_POST['smtpport'].'\'; //SET SMTP PORT\n ?>';
 fwrite($myfile, $txt);
 fclose($myfile);
 mysqli_connect($_POST['dbhost'], $_POST['dbuser'], $_POST['dbpass'], $_POST['dbname']);
