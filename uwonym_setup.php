@@ -12,6 +12,7 @@ $DATABASE_HOST = '".$_POST['dbhost']."';\n
 $DATABASE_USER = '".$_POST['dbuser']."'; //INSERT DB USER HERE\n
 $DATABASE_PASS = '".$_POST['dbpass']."'; //INSERT DB PASSWORD HERE\n
 $DATABASE_NAME = '".$_POST['dbname']."'; //INSERT DB NAME HERE\n
+$DATABASE_PORT = '".$_POST['dbport']."'; //INSERT DB PORT HERE\n
 \n
 \n
 //SMTP CONFIG\n
@@ -90,6 +91,10 @@ if (mysqli_query("CREATE TABLE IF NOT EXISTS `accounts` (
             </div>
             <div class="input-group" style="margin-top: 10px;">
                 <div class="input-group-prepend"><span class="input-group-text">Datenbank-Name</span></div><input class="form-control" type="text" name="dbname">
+                <div class="input-group-append"></div>
+            </div>
+            <div class="input-group" style="margin-top: 10px;">
+                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Port</span></div><input class="form-control" type="text" name="dbport">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
