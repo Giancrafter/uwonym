@@ -5,6 +5,6 @@
 
 # Setup
 
-Just edit **config.php** and then open this file once in your browser for database configuration. Then you're all set!
+Just open **uwonym-config.php** in your Browser and fill out the form. The whole thing is incomplete yet, so please edit **config.php** after saving and add **<?php** at the beginning and **?>** at the and.
 
 
