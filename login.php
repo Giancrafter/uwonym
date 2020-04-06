@@ -79,7 +79,7 @@ if ($stmt = $con->prepare('SELECT id, password, location, age, hash FROM account
 						<?php echo ($alert);?>
             <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Benutzername"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Passwort"></div>
-            <div class="form-group"><input type="submit" class="btn btn-primary btn-block" role="button" value="Login"></a><a href="reset.php" class="forgot">Email oder Passwort vergessen?</a><a class="btn btn-primary btn-block" role="button" href="register.pho">Registrieren</a></div>
+            <div class="form-group"><input type="submit" class="btn btn-primary btn-block" role="button" value="Login"></a><a href="reset.php" class="forgot">Email oder Passwort vergessen?</a><a class="btn btn-primary btn-block" role="button" href="register.php">Registrieren</a></div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>

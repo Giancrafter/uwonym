@@ -1,8 +1,8 @@
 <?php
 if (isset ($_POST['name'])){
 $myfile = fopen("config.php", "w") or die("Unable to open file!");
-$txt = '
-SITE CONFIG
+$txt = '<?php
+//SITE CONFIG
 $SITE_NAME = \''.$_POST['name'].'\'; //INSERT YOUR SITE NAME
 $SITE_DOMAIN = \''.$_POST['domain'].'\'; //INSERT SITE DOMAIN, FOR EXAMPLE google.com
 
@@ -21,7 +21,8 @@ $SMTP_AUTH = true; //ENABLE SMTP AUTHENTICATION
 $SMTP_USERNAME = \''.$_POST['smtpuser'].'\'; //INSERT SMTP USER NAME HERE
 $SMTP_PASSWORD = \''.$_POST['smtppass'].'\'; //INSERT SMTP PASSWORD HERE
 $SMTP_ENCRYPTION = \''.$_POST['smtpencryption'].'\'; //SET SMTP ENCRYPTION MODE
-$SMTP_PORT = \''.$_POST['smtpport'].'\'; //SET SMTP PORT';
+$SMTP_PORT = \''.$_POST['smtpport'].'\'; //SET SMTP PORT
+?>';
 fwrite($myfile, $txt);
 fclose($myfile);
 $mysqli = new mysqli($_POST['dbhost'], $_POST['dbuser'], $_POST['dbpass'], $_POST['dbname'], $_POST['dbport']);
