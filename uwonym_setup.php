@@ -49,13 +49,9 @@ $mysqli -> query("CREATE TABLE IF NOT EXISTS `accounts` (
 
 
 }
-
-
-
-
-
-?>
-<!DOCTYPE html>
+include 'config.php';
+if (!isset ($SITE_NAME)){
+echo '<!DOCTYPE html>
 <html>
 
 <head>
@@ -74,56 +70,60 @@ $mysqli -> query("CREATE TABLE IF NOT EXISTS `accounts` (
         </div>
         <form method="post">
             <div class="input-group" style="margin: 10px;margin-right: 0;margin-left: 0;">
-                <div class="input-group-prepend"><span class="input-group-text">Seitenname</span></div><input class="form-control" type="text" name="name">
+                <div class="input-group-prepend"><span class="input-group-text">Seitenname</span></div><input required class="form-control" type="text" name="name">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group">
-                <div class="input-group-prepend"><span class="input-group-text">Domain</span></div><input class="form-control" type="text" name="domain">
+                <div class="input-group-prepend"><span class="input-group-text">Domain</span></div><input required class="form-control" type="text" name="domain">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 30px;">
-                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Host</span></div><input class="form-control" type="text" name="dbhost" value="localhost">
+                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Host</span></div><input required class="form-control" type="text" name="dbhost" value="localhost">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
-                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Name</span></div><input class="form-control" type="text" name="dbname">
+                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Name</span></div><input required class="form-control" type="text" name="dbname">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
-                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Port</span></div><input class="form-control" type="text" name="dbport">
+                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Port</span></div><input required class="form-control" type="text" name="dbport">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
-                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Benutzername</span></div><input class="form-control" type="text" name="dbuser">
+                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Benutzername</span></div><input required class="form-control" type="text" name="dbuser">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
-                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Passwort</span></div><input class="form-control" type="text" name="dbpass">
+                <div class="input-group-prepend"><span class="input-group-text">Datenbank-Passwort</span></div><input required class="form-control" type="text" name="dbpass">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 30px;">
-                <div class="input-group-prepend"><span class="input-group-text">SMTP-Host</span></div><input class="form-control" type="text" name="smtphost">
+                <div class="input-group-prepend"><span class="input-group-text">SMTP-Host</span></div><input required class="form-control" type="text" name="smtphost">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
-                <div class="input-group-prepend"><span class="input-group-text">SMTP-Benutzername</span></div><input class="form-control" type="text" name="smtpuser">
+                <div class="input-group-prepend"><span class="input-group-text">SMTP-Benutzername</span></div><input required class="form-control" type="text" name="smtpuser">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
-                <div class="input-group-prepend"><span class="input-group-text">SMTP-Passwort</span></div><input class="form-control" type="text" name="smtppass">
+                <div class="input-group-prepend"><span class="input-group-text">SMTP-Passwort</span></div><input required class="form-control" type="text" name="smtppass">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
-                <div class="input-group-prepend"><span class="input-group-text">SMTP-Verschlüsselung</span></div><input class="form-control" type="text" name="smtpencryption">
+                <div class="input-group-prepend"><span class="input-group-text">SMTP-Verschlüsselung</span></div><input required class="form-control" type="text" name="smtpencryption">
                 <div class="input-group-append"></div>
             </div>
             <div class="input-group" style="margin-top: 10px;">
-                <div class="input-group-prepend"><span class="input-group-text">SMTP-Port</span></div><input class="form-control" type="text" name="smtpport">
+                <div class="input-group-prepend"><span class="input-group-text">SMTP-Port</span></div><input required class="form-control" type="text" name="smtpport">
                 <div class="input-group-append"></div>
-            </div><input class="btn btn-primary" type="submit" value="Speichern" style="margin-top:10px;" /></form>
+            </div><input required class="btn btn-primary" type="submit" value="Speichern" style="margin-top:10px;" /></form>
     </main>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
-</html>
+</html>';}
+
+
+
+?>

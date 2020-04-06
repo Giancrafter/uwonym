@@ -140,13 +140,13 @@
             <div class="row">
                 <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
                     <ul class="list-inline mb-2">
-                        <li class="list-inline-item"><a href="about.html" style="color: rgb(255,0,0);">Über uns</a></li>
+                        <li class="list-inline-item"><a href="about.php" style="color: rgb(255,0,0);">Über uns</a></li>
                         <li class="list-inline-item"><span>⋅</span></li>
-                        <li class="list-inline-item"><a href="contact.html" style="color: rgb(255,0,0);">Kontakt</a></li>
+                        <li class="list-inline-item"><a href="contact.php" style="color: rgb(255,0,0);">Kontakt</a></li>
                         <li class="list-inline-item"><span>⋅</span></li>
-                        <li class="list-inline-item"><a href="terms.html" style="color: rgb(255,0,0);">Nutzungsbedungungen</a></li>
+                        <li class="list-inline-item"><a href="terms.php" style="color: rgb(255,0,0);">Nutzungsbedungungen</a></li>
                         <li class="list-inline-item"><span>⋅</span></li>
-                        <li class="list-inline-item"><a href="pricing.html" style="color: rgb(255,0,0);">Preise</a></li>
+                        <li class="list-inline-item"><a href="pricing.php" style="color: rgb(255,0,0);">Preise</a></li>
                     </ul>
                     <p class="text-muted small mb-4 mb-lg-0">© uwonym. 2019. All Rights Reserved.</p>
                 </div>
