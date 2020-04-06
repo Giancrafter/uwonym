@@ -115,7 +115,7 @@ Hallo, ' . $_POST['username'] . ', <br />
 	</div>';
 } catch (Exception $e) {
 	$alert = '<div class="alert alert-danger" role="alert">
-Ein unbekannter Fehler ist aufgetreten.
+Ein unbekannter Fehler ist aufgetreten:'.$e.'
 </div>';
 }}}
 
