@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="2df2cc73-08bd-46c3-b993-f5b32c951812";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-</head>
+   </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
