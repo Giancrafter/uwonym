@@ -33,7 +33,7 @@ $stmt->close();
 $alert = '<div class="alert alert-success" role="alert">
 Profil erfolgreich bearbeitet.
 </div>';
-}
+}}}
 
 
 $stmt = $con->prepare('SELECT password, email, gender, search, profile_pic, description, hash, age, location FROM accounts WHERE id = ?');
@@ -72,7 +72,7 @@ if (isset($_GET['edit'])) {
     if ($search==1) {$t4='checked';}else{$t4='';}
     if ($search==2) {$t5='checked';}else{$t5='';}
     if ($search==3) {$t6='checked';}else{$t6='';}
-$content = '<<form action="profile.php" method="post">
+$content = '<form action="profile.php" method="post">
     
 <p><strong>Profilbild: </strong><input class="form-control" type="text" name="changeimage" value="'.$profile_pic.'" /></p>
 <p><strong>Benutzername: </strong><input class="form-control" type="text" name="changename" value="'.$_SESSION['name'].'" /></p>
